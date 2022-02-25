@@ -44,6 +44,9 @@ bagus@m049:sner_os_full$ ./predict_vadn.py -i bagus-test_16000.wav -s full
 Valence, arousal, dominance, naturalness: [[-0.1591546   0.37833244 -0.06329431  0.39182937]]
 ```
 
+### Demo
+https://youtu.be/doZbrVsPpSU
+
 ### Citation
 
 ```
