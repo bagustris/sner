@@ -1,0 +1,4 @@
+opensmile==2.4.1
+scikit-learn==1.0.2
+audiofile==0.4.1
+joblib==1.0.1
