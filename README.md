@@ -24,7 +24,8 @@ or
 ```
 -i input file
 -m path of pre-trained model i .joblib format
--s split, `chunks` (every ten seconds) or `full` (without split)
+-s split, `chunks` (every duration seconds) or `full` (without split)
+-d duration (in seconds) if split is chunks, default duration=10  
 ```
 
 ## Example
