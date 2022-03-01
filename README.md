@@ -1,9 +1,9 @@
 # sner
-SNER = Speech Naturalness and Emotion Recognition  
-A very simple inference of speech emotion and naturalness using machine learning pre-trained model.   
+SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of speech emotion and naturalness using machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with inference time in less than one second (0.8s inference time for 13s audio file).    
 
-Input: speech file (wav)  
-Output: Score of valence, arousal, dominance, and naturalness in range [-1, 1]  
+## Input-output format 
+Input: speech file (wav) readable by `audiofile` package   
+Output: Score of valence, arousal, dominance, and naturalness in the range [-1, 1].  
 
 
 ## Installation
@@ -12,10 +12,10 @@ install dependencies
     python3 -m pip install -r requirements.txt
     
     
-## Usage
+## (API) Usage
     python3 predict_vadn.py -i input.wav
     
-or
+or (need to: chmod +x `predict_vadn.py`)
 
     ./predict_vadn.py -i input.wav
    
@@ -56,3 +56,8 @@ YouTube:  https://youtu.be/doZbrVsPpSU
 Bagus Tris Atmaja, Akira Sasou, and Masato Akagi, "Concurrent Speech Emotion and Naturalness 
 Recognitions Using Multitask Learning", 2022.
 ```
+
+### License and Contact
+The software is provided as it is without any warranty. It is free for academic
+and research purposes but prohibited for commercial. For commercial and other
+questions, contact me at b-atmaja@aist.go.jp 
