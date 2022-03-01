@@ -12,7 +12,7 @@ install dependencies
     python3 -m pip install -r requirements.txt
     
     
-## (API) Usage
+## Usage
     python3 predict_vadn.py -i input.wav
     
 or (need to: chmod +x `predict_vadn.py`)
