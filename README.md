@@ -1,5 +1,5 @@
 # sner
-SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of speech emotion and naturalness using machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with inference time in less than one second (0.8s inference time for 13s audio file).    
+SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of dimensional speech emotion (valence, arousal, dominance) and naturalness using machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with inference time in less than one second (0.8s inference time for 13s audio file).    
 
 ## Input-output format 
 Input: speech file (wav) readable by `audiofile` package   
