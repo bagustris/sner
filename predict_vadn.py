@@ -4,13 +4,12 @@
 from joblib import load
 import opensmile
 import argparse
-from sklearn.preprocessing import StandardScaler
 import audiofile
-import numpy as np
+import os
 
 parser = argparse.ArgumentParser(
-	description='Predict Valence, arousal, dominance, and naturalness from audio file. Usage: ./predict_vadn.py -i input.wav -m model.joblib')
-parser.add_argument('-i', '--input', type=str)
+	description='Predict Valence, arousal, dominance, and naturalness from an audio file. \n Example: ./predict_vadn.py input.wav -m model.joblib')
+parser.add_argument('input', type=str, help='Input audio file')
 parser.add_argument('-m', '--model', type=str,
                     default='model/nn_sner_v1.0.joblib')
 parser.add_argument('-s', '--split', type=str,
@@ -45,3 +44,5 @@ else:
     scaled_feat = scaler.transform(feat.to_numpy())
     pred = nn.predict(scaled_feat)
     print(f"Valence, arousal, dominance, naturalness: {pred}")
+
+#TODO add score of remaining chunks, e.g, -d 10 for 14s audio file will input only one score for each 10s chunk, it should be another score for the remaining 4s.

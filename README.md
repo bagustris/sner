@@ -1,5 +1,5 @@
 # sner
-SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of dimensional speech emotion (valence, arousal, dominance) and naturalness using machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with inference time in less than one second (0.8s inference time for 13s audio file).    
+SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of dimensional speech emotion (valence, arousal, dominance) and naturalness using a machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with an inference time of less than one second (0.8s inference time for 13s audio file).    
 
 ## Input-output format 
 Input: speech file (wav) readable by `audiofile` package   
@@ -13,7 +13,7 @@ install dependencies
     
     
 ## Usage
-    python3 predict_vadn.py -i input.wav
+    python3 predict_vadn.py input.wav
     
 or (need to: chmod +x `predict_vadn.py`)
 
@@ -21,16 +21,17 @@ or (need to: chmod +x `predict_vadn.py`)
    
 ## Arguments
 
-```
--i input file
--m path of pre-trained model i .joblib format
--s split, `chunks` (every duration seconds) or `full` (without split)
--d duration (in seconds) if split is chunks, default duration=10  
+```bash
+Positional (required): input file (wav, ogg, mp3)
+Opsional:  
+-m path of pre-trained model in a JOBLIB format
+-s split, `chunks` (every duration seconds), or `full` (without split)
+-d duration (in seconds) if split chunks, default duration=10  
 ```
 
 ## Example
 ```
-bagus@m049:sner_os_full$ ./predict_vadn.py -i bagus-test_16000.wav 
+bagus@m049:sner_os_full$ ./predict_vadn.py bagus-test_16000.wav -d 2
 Valence, arousal, dominance, naturalness #0: [[-0.09434319  0.44684726 -0.08786711  0.09021541]]
 Valence, arousal, dominance, naturalness #1: [[-0.14146665  0.6224453  -0.19895521  0.13970129]]
 Valence, arousal, dominance, naturalness #2: [[-0.06549488  0.42078984 -0.07323465  0.14856477]]
@@ -40,7 +41,7 @@ Valence, arousal, dominance, naturalness #5: [[-0.04649594  0.53053147 -0.117874
 Valence, arousal, dominance, naturalness #6: [[-0.12129027  0.48048788 -0.11438508  0.14086896]]
 Valence, arousal, dominance, naturalness #7: [[-0.07501961  0.50562567 -0.12277649  0.08429483]]
 Valence, arousal, dominance, naturalness #8: [[-0.1845332   0.47495478 -0.1136996   0.09605219]]
-bagus@m049:sner_os_full$ ./predict_vadn.py -i bagus-test_16000.wav -s full
+bagus@m049:sner_os_full$ ./predict_vadn.py bagus-test_16000.wav -s full
 Valence, arousal, dominance, naturalness: [[-0.1591546   0.37833244 -0.06329431  0.39182937]]
 ```
 
