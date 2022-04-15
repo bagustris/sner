@@ -59,6 +59,7 @@ Recognitions Using Multitask Learning", 2022.
 ```
 
 ### License and Contact
+The license of the software is PolyForm Noncommercial License 1.0.0, see the attached file.
 The software is provided as it is without any warranty. It is free for academic
 and research purposes but prohibited for commercial. For commercial and other
 questions, contact me at b-atmaja@aist.go.jp 
