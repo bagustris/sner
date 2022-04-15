@@ -1,13 +1,13 @@
 # sner
-SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of dimensional speech emotion (valence, arousal, dominance) and naturalness using a machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in .joblib format (60MB) with an inference time of less than one second (0.8s inference time for 13s audio file).    
+SNER = Speech Naturalness and Emotion Recognition. SNER is a very simple inference of dimensional speech emotion (valence, arousal, dominance) and naturalness using a machine learning pre-trained model. The program focuses on light size and fast inference time. The model is saved in JOBLIB format (60MB) with an inference time of less than one second (0.8s inference time for 13s audio file).    
 
 ## Input-output format 
-Input: speech file (wav) readable by `audiofile` package   
+Input: speech file (e.g., wav) readable by `audiofile` package   
 Output: Score of valence, arousal, dominance, and naturalness in the range [-1, 1].  
 
 
 ## Installation
-install dependencies
+install dependencies and use the software inside the parent directory.
 
     python3 -m pip install -r requirements.txt
     
@@ -15,19 +15,21 @@ install dependencies
 ## Usage
     python3 predict_vadn.py input.wav
     
-or (need to: chmod +x `predict_vadn.py`)
+or (need to: `chmod +x predict_vadn.py`)
 
-    ./predict_vadn.py -i input.wav
+    ./predict_vadn.py input.wav
    
 ## Arguments
 
 ```bash
-Positional (required): input file (wav, ogg, mp3)
-Opsional:  
--m path of pre-trained model in a JOBLIB format
--s split, `chunks` (every duration seconds), or `full` (without split)
--d duration (in seconds) if split chunks, default duration=10  
+Positional (required): 'input file' (wav, ogg, mp3)
+Optional:  
+-m 'path', path of pre-trained model in a JOBLIB format
+-s 'split', 'chunks' (every duration seconds), or 'full' (without split)
+-d 'duration', duration (in seconds) if split chunks, default duration=10  
+-h, show the help
 ```
+
 
 ## Example
 ```
@@ -45,21 +47,21 @@ bagus@m049:sner_os_full$ ./predict_vadn.py bagus-test_16000.wav -s full
 Valence, arousal, dominance, naturalness: [[-0.1591546   0.37833244 -0.06329431  0.39182937]]
 ```
 
-### Demo
+### Demo (version 1.0)
 YouTube:  https://youtu.be/doZbrVsPpSU  
 
 [![asciicast](https://asciinema.org/a/472390.svg)](https://asciinema.org/a/472390)
 
 
 ### Citation
-Small parts of the software is inspired and based on the following paper. Please cite this paper if you use this software.
+Small parts of the software are inspired and based on the following paper. Please cite this paper if you use this software.
 ```
 Bagus Tris Atmaja, Akira Sasou, and Masato Akagi, "Concurrent Speech Emotion and Naturalness 
 Recognitions Using Multitask Learning", 2022.
 ```
 
 ### License and Contact
-The license of the software is PolyForm Noncommercial License 1.0.0, see the attached file.
+The license of the software is PolyForm Noncommercial License 1.0.0; see the attached file.
 The software is provided as it is without any warranty. It is free for academic
 and research purposes but prohibited for commercial. For commercial and other
 questions, contact me at b-atmaja@aist.go.jp 
