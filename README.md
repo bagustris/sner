@@ -54,10 +54,9 @@ YouTube:  https://youtu.be/doZbrVsPpSU
 
 
 ### Citation
-Small parts of the software are inspired and based on the following paper. Please cite this paper if you use this software.
+Parts of the software are used in and based on the following paper. Please cite this paper if you use this software.
 ```
-Bagus Tris Atmaja, Akira Sasou, and Masato Akagi, "Concurrent Speech Emotion and Naturalness 
-Recognitions Using Multitask Learning", 2022.
+B. T. Atmaja, A. Sasou, and M. Akagi, “Speech Emotion and Naturalness Recognitions with Multitask and Single-task Learnings,” IEEE Access, pp. 1–1, 2022, doi: 10.1109/ACCESS.2022.3189481.
 ```
 
 ### License and Contact
