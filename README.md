@@ -33,6 +33,7 @@ Optional:
 
 ## Example
 ```
+# to predict each 2-second duration of audio file
 bagus@m049:sner_os_full$ ./predict_vadn.py bagus-test_16000.wav -d 2
 Valence, arousal, dominance, naturalness #0: [[-0.09434319  0.44684726 -0.08786711  0.09021541]]
 Valence, arousal, dominance, naturalness #1: [[-0.14146665  0.6224453  -0.19895521  0.13970129]]
@@ -43,6 +44,7 @@ Valence, arousal, dominance, naturalness #5: [[-0.04649594  0.53053147 -0.117874
 Valence, arousal, dominance, naturalness #6: [[-0.12129027  0.48048788 -0.11438508  0.14086896]]
 Valence, arousal, dominance, naturalness #7: [[-0.07501961  0.50562567 -0.12277649  0.08429483]]
 Valence, arousal, dominance, naturalness #8: [[-0.1845332   0.47495478 -0.1136996   0.09605219]]
+# to predict the whole duration in a single value for each variable
 bagus@m049:sner_os_full$ ./predict_vadn.py bagus-test_16000.wav -s full
 Valence, arousal, dominance, naturalness: [[-0.1591546   0.37833244 -0.06329431  0.39182937]]
 ```
@@ -57,12 +59,12 @@ YouTube:  https://youtu.be/doZbrVsPpSU
 Parts of the software are used in and based on the following paper. Please cite this paper if you use this software.
 ```
 B. T. Atmaja, A. Sasou, and M. Akagi, “Speech Emotion and Naturalness 
-Recognitions with Multitask and Single-task Learnings,” IEEE Access, 
+Recognition with Multitask and Single-task Learnings,” IEEE Access, 
 pp. 1–1, 2022, doi: 10.1109/ACCESS.2022.3189481.
 ```
 
 ### License and Contact
 The license of the software is PolyForm Noncommercial License 1.0.0; see the attached file.
 The software is provided as it is without any warranty. It is free for academic
-and research purposes but prohibited for commercial. For commercial and other
-questions, contact me at b-atmaja@aist.go.jp 
+and research purposes but prohibited for commercial use. For commercial and other
+questions, contact me at bagustris@outlook.com.  
